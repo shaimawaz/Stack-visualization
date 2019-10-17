@@ -1,0 +1,62 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  background-image: url("images/back.jpg");
+}
+
+.middle {
+  background-color: white;
+  position: fixed;
+  left: 20%;
+  height: 100%;
+  width: 60%;
+  padding: 3%;
+  border: 1px solid #ccc;
+}
+
+h1 {
+  font-size: 400%;
+  text-align: center;
+  font-style: italic;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.right {
+  width: 20%;
+  float: right;
+}
+
+.right button {
+  border: none;
+  color: white;
+  background-color: #226d24;
+  width: 90%;
+  height: 7vh;
+  border-radius: 3px;
+  margin: 4%;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 120%;
+  font-weight: 700;
+}
+
+.left {
+  padding: 7%;
+  padding-left: 20%;
+}
+
+.left #stack {
+  min-height: 300px;
+  max-height: auto;
+  width: 30%;
+  border: 3px solid #ccc;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  position: relative;
+}
+
+.left #stack img {
+  width: 100%;
+  position: absolute;
+  margin-bottom: 1%;
+}
+/*# sourceMappingURL=index.css.map */
