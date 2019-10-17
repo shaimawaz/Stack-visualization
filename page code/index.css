@@ -37,6 +37,7 @@ h1 {
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 120%;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .left {
@@ -45,18 +46,24 @@ h1 {
 }
 
 .left #stack {
-  min-height: 300px;
+  min-height: 200px;
   max-height: auto;
   width: 30%;
   border: 3px solid #ccc;
   border-top: none;
   border-bottom-left-radius: 5px;
-  position: relative;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .left #stack img {
   width: 100%;
-  position: absolute;
-  margin-bottom: 1%;
+  margin-bottom: -8%;
 }
 /*# sourceMappingURL=index.css.map */
