@@ -54,6 +54,34 @@ window.onbeforeunload = closingCode;
 function closingCode(){
    newStack();
 }
-function size(){
+function sizeOfStack(){
+    var items=[];
+    items= bring_arr();
+    size=items.length;
+    document.getElementById("size").innerHTML= "The size of<br>the stack is:<br>" +size;
+
+    setTimeout(function(){
+        document.getElementById("size").innerHTML="";
+    }, 5000);
+}
+function isEmpty(){
+    var items=[];
+    items= bring_arr();
+    size=items.length;
+
+    if(size>0)
+        document.getElementById("empty").innerHTML= "The stack<br> is not empty";
+    else
+        document.getElementById("empty").innerHTML= "<img src='images/empty.gif' class='empty'>";
+
+    setTimeout(function(){
+        document.getElementById("empty").innerHTML="";
+    }, 5000);
+}
+function swapElements(){
+    var items=[];
+    items= bring_arr();
+    let temper=items[items.length-1];
     
+
 }
