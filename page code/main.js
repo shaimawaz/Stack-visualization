@@ -6,20 +6,28 @@ function bring_arr(){
 function printTostack(items,name){
     var i;
     var text="";
-    for (i = 0; i < items.length-1; i++) {
-        item = "<img src='"+items[i]+"' class='instack'>";
-        text +=item;
-    }
-    if(name != "")
-        if(name=="pushing")
-            item = "<img src='"+items[items.length-1]+"' class='pushing'>";
+    if(name!="normal"){
+        for (i = 0; i < items.length-1; i++) {
+            item = "<img src='"+items[i]+"' class='instack'>";
+            text +=item;
+        }
+        if(name != "")
+            if(name=="pushing")
+                item = "<img src='"+items[items.length-1]+"' class='pushing'>";
+            else
+                item = "<img src='"+items[items.length-1]+"' class='popping'>";
         else
-            item = "<img src='"+items[items.length-1]+"' class='popping'>";
-    else
-    {
-        item="";
+        {
+            item="";
+        }
+        text +=item;
+    }else{
+        for (i = 0; i < items.length; i++) {
+            item = "<img src='"+items[i]+"' class='instack'>";
+            text +=item;
+        }
     }
-    text +=item;
+
     document.getElementById("stack").innerHTML = text;
 }
 function store(items){
@@ -82,6 +90,9 @@ function swapElements(){
     var items=[];
     items= bring_arr();
     let temper=items[items.length-1];
-    
+    items[items.length-1]=items[items.length-2];
+    items[items.length-2]=temper;
+    printTostack(items,"normal")
+    store(items)
 
 }
