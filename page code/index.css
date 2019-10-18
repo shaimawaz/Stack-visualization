@@ -12,12 +12,15 @@ body, html {
   width: 60%;
   padding: 3%;
   border: 1px solid #ccc;
+  overflow-y: auto;
 }
 
 h1 {
   font-size: 400%;
   text-align: center;
   font-style: italic;
+  margin-top: 1%;
+  padding-top: 0;
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
@@ -42,13 +45,22 @@ h1 {
 
 .left {
   padding: 7%;
-  padding-left: 20%;
+}
+
+.left #size {
+  text-align: left;
+  font-style: italic;
+  margin-left: 0;
+  padding-top: 0;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 150%;
 }
 
 .left #stack {
   min-height: 200px;
   max-height: auto;
-  width: 30%;
+  margin-left: 15%;
+  width: 29%;
   border: 3px solid #ccc;
   border-top: none;
   border-bottom-left-radius: 5px;
@@ -56,6 +68,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 5%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
@@ -65,5 +78,134 @@ h1 {
 .left #stack img {
   width: 100%;
   margin-bottom: -8%;
+  position: relative;
+}
+
+.left #stack .pushing {
+  -webkit-animation-name: pushing;
+          animation-name: pushing;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.left #stack .popping {
+  -webkit-animation-name: popping;
+          animation-name: popping;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.left #stack .instack {
+  -webkit-animation-name: instack;
+          animation-name: instack;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes pushing {
+  0% {
+    left: -200%;
+    top: -200%;
+  }
+  25% {
+    left: -100%;
+    top: -200%;
+  }
+  50% {
+    left: 0px;
+    top: -200%;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes pushing {
+  0% {
+    left: -200%;
+    top: -200%;
+  }
+  25% {
+    left: -100%;
+    top: -200%;
+  }
+  50% {
+    left: 0px;
+    top: -200%;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes instack {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes instack {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes popping {
+  0% {
+    top: 0px;
+  }
+  25% {
+    left: 0px;
+    top: -200px;
+  }
+  50% {
+    left: -100px;
+    top: -200px;
+  }
+  90% {
+    left: -200px;
+    top: -200px;
+  }
+  100% {
+    left: -200px;
+    top: -200px;
+    visibility: hidden;
+  }
+}
+
+@keyframes popping {
+  0% {
+    top: 0px;
+  }
+  25% {
+    left: 0px;
+    top: -200px;
+  }
+  50% {
+    left: -100px;
+    top: -200px;
+  }
+  90% {
+    left: -200px;
+    top: -200px;
+  }
+  100% {
+    left: -200px;
+    top: -200px;
+    visibility: hidden;
+  }
 }
 /*# sourceMappingURL=index.css.map */

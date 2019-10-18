@@ -7,7 +7,7 @@
     <title>Stack visualization</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='index.css'>
-    <!-- <script src='main.js'></script> -->
+   
 </head>
 
 <body>
@@ -17,19 +17,17 @@
                 <h1>Stack Visualization</h1>
             </div>
             <div class="right">
-                <button id="NewStack">New Stack</button>
-                <button id="Push">Push</button>
-                <button id="Pop"> Pop</button>
-                <button id="Size">Size</button>
-                <button id="isEmpty">isEmpty</button>
-                <button id="Swap">Swap</button>
+                <button id="NewStack" onclick="newStack()">New Stack</button>
+                <button id="Push" onclick="push()">Push</button>
+                <button id="Pop" onclick="Pop()"> Pop</button>
+                <button id="Size" onclick="size()">Size</button>
+                <button id="isEmpty" onclick="isEmpty()">isEmpty</button>
+                <button id="Swap" onclick="swap()">Swap</button>
             </div>
             <div class="left">
+                <h1 id="size"></h1>
                 <div id="stack">
-                    <img src="images/book_1.png">
-                    <img src="images/book_3.png">
-                    <img src="images/book_2.png">
-                    <img src="images/book_4.png">
+                   <!-- content goes here  -->
                 </div>
             </div>
         </div>
@@ -38,3 +36,4 @@
 </body>
 
 </html>
+<script src='main.js'></script>
